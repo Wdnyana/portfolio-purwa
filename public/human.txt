@@ -1,0 +1,18 @@
+WEB DEVELOPER
+
+I PUTU PURWA WIADNYANA PUTRA
+
+
+Design tools:
+Figma
+Photoshop
+
+_______________________________________________________________________________
+
+TECHNOLOGY
+
+React
+Next.js 14
+Typescript
+Framer Motion
+Tailwind CSS
