@@ -7,6 +7,7 @@ import { loadingTimeout } from '@/lib/loading-timeout'
 import { archivo } from '@/lib/font'
 
 import MainLayout from '@/components/layout/page/main-layout'
+import AboutHero from '@/components/sections/about-hero'
 
 export default function About() {
   const [loading, setLoading] = useState(true)
@@ -27,7 +28,9 @@ export default function About() {
               : 'opacity-100 transition-opacity duration-500'
           }`}
         >
-          <h1 className={`${archivo.className}`}>About Page</h1>
+          <div className="h-screen w-full flex items-center justify-center">
+            <AboutHero />
+          </div>
         </div>
       </div>
     </MainLayout>

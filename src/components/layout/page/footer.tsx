@@ -27,7 +27,7 @@ export default function Footer() {
 
           <div>
             <h1
-              className={`${archivo.className} uppercase font-bold text-center md:text-start text-2xl md:text-[2rem] lg:text-[2.5rem] xl:text-[4rem] 2xl:text-[5rem] leading-wider md:leading-tight tracking-wider`}
+              className={`${archivo.className} uppercase font-bold text-center md:text-start text-2xl md:text-[3rem] lg:text-[3.5rem] xl:text-[4rem] leading-wider md:leading-tight tracking-wider`}
             >
               get in touch
             </h1>

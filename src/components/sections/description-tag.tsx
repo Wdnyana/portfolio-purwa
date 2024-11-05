@@ -8,7 +8,7 @@ export default function DescriptionTag() {
         // variants={textHighlight}
         // initial="initial"
         // animate="animate"
-        className="text-center text-base md:text-lg xl:text-[22px] "
+        className="text-center text-base md:text-lg xl:text-[22px]"
       >
         Explore my portfolio of projects, where innovation meets interactivity.
         Each project showcases a blend of creativity and technical expertise,
