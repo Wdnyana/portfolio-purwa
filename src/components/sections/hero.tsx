@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 import { PhotoProfile } from '../../../public/images/index'
 import { textHighlight } from '@/lib/animation'
@@ -31,8 +31,15 @@ const heroTextSm = [
 ]
 
 export default function Hero() {
+  const { scrollY } = useScroll()
+  const scale = useTransform(scrollY, [0, 200], [1, 0.9])
+  const opacity = useTransform(scrollY, [0, 300], [1, 0.5])
+
   return (
-    <div className="mt-[3.5rem] lg:mt-0 w-full relative flex flex-col lg:flex-row items-center justify-center lg:justify-normal gap-12 md:gap-8 lg:gap-0 min-h-full">
+    <motion.div
+      style={{ scale, opacity }}
+      className="mt-[3.5rem] lg:mt-0 w-full relative flex flex-col lg:flex-row items-center justify-center lg:justify-normal gap-12 md:gap-8 lg:gap-0 min-h-full"
+    >
       <motion.div className="max-w-full hidden lg:block">
         {heroTextLg.map((text, idx) => (
           <motion.h1
@@ -123,6 +130,6 @@ export default function Hero() {
           />
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   )
 }

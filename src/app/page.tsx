@@ -31,11 +31,9 @@ export default function Home() {
           <Hero />
         </div>
 
-        <div className="my-5 lg:my-20 2xl:my-24 h-auto w-full">
+        <div className="my-5 lg:my-20 2xl:my-24 h-full w-full">
           <DescriptionTag />
-        </div>
 
-        <div className="my-5 lg:my-20 2xl:my-24 h-auto w-full">
           <HighlightProject />
         </div>
       </section>

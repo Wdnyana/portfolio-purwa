@@ -27,7 +27,11 @@ export default function Blog() {
               : 'opacity-100 transition-opacity duration-500'
           }`}
         >
-          <h1 className={`${archivo.className}`}>Blog Page</h1>
+          <div className="flex  items-center justify-center h-auto mt-28">
+            <h1 className={`${archivo.className}`}>
+              This Blog page is coming soon.
+            </h1>
+          </div>
         </div>
       </div>
     </MainLayout>

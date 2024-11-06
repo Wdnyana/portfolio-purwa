@@ -14,7 +14,7 @@ export default function MainLayout({
 
       <main className="flex-1 relative px-3 lg:px-6">{children}</main>
 
-      <footer>
+      <footer className="bg-secondary">
         <Footer />
       </footer>
     </div>

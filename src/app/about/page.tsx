@@ -8,6 +8,7 @@ import { archivo } from '@/lib/font'
 
 import MainLayout from '@/components/layout/page/main-layout'
 import AboutHero from '@/components/sections/about-hero'
+import AboutDescription from '@/components/sections/about-description'
 
 export default function About() {
   const [loading, setLoading] = useState(true)
@@ -30,6 +31,10 @@ export default function About() {
         >
           <div className="h-screen w-full flex items-center justify-center">
             <AboutHero />
+          </div>
+
+          <div className="mt-5 min-h-screen w-full relative">
+            <AboutDescription />
           </div>
         </div>
       </div>

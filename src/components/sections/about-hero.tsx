@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 import { archivo, popins } from '@/lib/font'
 import { textHighlight } from '@/lib/animation'
@@ -12,9 +12,16 @@ const textDesc = [
 ]
 
 export default function AboutHero() {
+  const { scrollY } = useScroll()
+  const scale = useTransform(scrollY, [0, 200], [1, 0.9])
+  const opacity = useTransform(scrollY, [0, 300], [1, 0.5])
+
   return (
     <>
-      <div className="flex flex-col gap-5 xl:w-[85%]">
+      <motion.div
+        style={{ scale, opacity }}
+        className="flex flex-col gap-5 xl:w-[85%]"
+      >
         <motion.div className="max-w-full text-center block md:hidden lg:hidden">
           {heroTextSm.map((text, idx) => (
             <motion.h1
@@ -72,7 +79,7 @@ export default function AboutHero() {
             </motion.p>
           ))}
         </motion.div>
-      </div>
+      </motion.div>
     </>
   )
 }
