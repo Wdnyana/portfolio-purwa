@@ -8,6 +8,18 @@ body {
   transition-timing-function: ease-in-out;
 }
 
+.sticky-scroll-item {
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  &::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    @apply bg-transparent;
+  }
+}
+
 .page-transition {
   opacity: 0;
   background: var(--secondary);
@@ -92,6 +104,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

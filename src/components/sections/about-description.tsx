@@ -30,7 +30,7 @@ export default function AboutDescription() {
   }, [])
 
   return (
-    <div className="sticky top-0 min-h-[175vh] overflow-hidden">
+    <div className="sticky top-0 min-h-[210vh] md:min-h-[175vh] overflow-hidden">
       <div className=" grid grid-cols-1 md:items-center h-[125vh] relative">
         <motion.div
           className="border-t-4"

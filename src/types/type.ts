@@ -30,3 +30,12 @@ export type TypesNavMenuMobile = TypesNavMenuDesktop & {
   toggleOpen: any
   isOpen: any
 }
+
+export type TypesStickyScroll = {
+  content: {
+    title: string
+    description: string
+    content?: React.ReactNode | any
+  }[]
+  contentClassName?: string
+}
