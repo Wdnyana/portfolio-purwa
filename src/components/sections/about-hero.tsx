@@ -8,7 +8,7 @@ const heroTextSm = ['A Web', 'Developer', 'based in', 'Tabanan.']
 const heroTextMd = ['A Web Developer based in Tabanan.']
 
 const textDesc = [
-  'Motivated Web Developer with a strong background in programming languages and web technologies, with a particular passion for frontend development. Experienced in creating and maintaining websites and applications, and dedicated to adding eye-catching, beautiful touches to every interactive animation. Committed to collaborating with teams to achieve project goals while continuously enhancing technical skills.',
+  'A Motivated Web Developer with a strong background in programming languages, Web technologies, and a deep passion for full-stack Deb Development. Finding joy in achieving goals through designing, Developing, and maintaining Web Applications, combining reliable functionality with visually appealing designs. Dedicated to adding elegant, eye-catching touches to every interactive animation on the Front-end while ensuring robust and scalable solutions on the Back-end. Committed to collaborating with teams to achieve project objectives and continuously enhancing technical skills across all aspects of Development.',
 ]
 
 export default function AboutHero() {

@@ -76,14 +76,18 @@ export default function AboutDescription() {
             <p
               className={`${popins.className} text-center md:text-start text-base md:text-lg xl:text-[22px] leading-wider`}
             >
-              As a web developer based in Tabanan, I’m Purwa Wiadnyana,
-              passionate about creating beautifully interactive web experiences.
-              While I specialize in front-end development, I often take on
-              full-stack roles, bridging the gap between design and
-              functionality seamlessly. I&apos;ve honed my skills with React and
-              Next.js, utilizing tools like Shadcn, Tailwind CSS, and Framer
-              Motion to craft engaging, smooth interactions that elevate the
-              user experience.
+              As a motivated Web Developer aspiring to become an experienced
+              Full-Stack Engineer, I’m Purwa Wiadnyana, passionate about
+              crafting beautifully interactive web experiences. With a strong
+              foundation in programming languages and web technologies, I
+              specialize in Full-Stack Web Development. I thrive on combining
+              reliable functionality with visually captivating designs and
+              robust architectures. I am committed to continuously honing my
+              skills in both Front-end and Back-end development to create smooth
+              and engaging interactions. Dedicated to delivering robust and
+              scalable solutions on the backend while adding captivating touches
+              to every interactive animation on the Front-end, I always strive
+              to provide exceptional user experiences.
             </p>
           </motion.div>
         </div>
@@ -233,6 +237,7 @@ export default function AboutDescription() {
             </h1>
           </motion.div>
 
+          {/*experience start*/}
           <div className="basis-1/2 flex flex-col gap-8">
             <motion.div
               className="gap-4 bg-primary/40 py-4 px-5 inline-block rounded-lg"
@@ -317,7 +322,51 @@ export default function AboutDescription() {
                   margin: '0px 0px -200px 0px',
                 }}
               >
-                2023 - Now, Bali - Indonesia | Freelance Web2 and Frontend Web3
+                2023 - 2024, Bali - Indonesia | Freelance Web2 and Frontend Web3
+                Developer.
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              className="gap-4 bg-primary/40 py-4 px-5 inline-block rounded-lg"
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              exit={{ x: '100%', opacity: 0 }}
+              transition={{ duration: 1, ease: 'easeInOut' }}
+              viewport={{
+                once: false,
+                amount: 0.5,
+                margin: '0px 0px -200px 0px',
+              }}
+            >
+              <motion.h3
+                className={`${archivo.className} text-center md:text-start text-xl font-medium md:text-[22px] 2xl:text-[26px] leading-wider`}
+                initial={{ x: 100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                exit={{ x: '100%', opacity: 0 }}
+                transition={{ duration: 1, ease: 'easeInOut', delay: 0.2 }}
+                viewport={{
+                  once: false,
+                  amount: 0.5,
+                  margin: '0px 0px -200px 0px',
+                }}
+              >
+                Jobseeker
+              </motion.h3>
+
+              <motion.p
+                className={`${popins.className} mt-4 text-center md:text-start text-lg font-medium md:text-[20px] 2xl:text-[22px] leading-wider text-muted-foreground`}
+                initial={{ x: 100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                exit={{ x: '100%', opacity: 0 }}
+                transition={{ duration: 1, ease: 'easeInOut', delay: 0.4 }}
+                viewport={{
+                  once: false,
+                  amount: 0.5,
+                  margin: '0px 0px -200px 0px',
+                }}
+              >
+                November 2024 - Now, Bali - Indonesia | Apprentice Backend
                 Developer.
               </motion.p>
             </motion.div>

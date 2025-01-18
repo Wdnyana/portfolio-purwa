@@ -9,7 +9,7 @@ import { Instagram, Linkedin, Github, ArrowUpRight } from 'lucide-react'
 import { SecondPhotoProfile } from '../../../public/images/index'
 import { archivo } from '@/lib/font'
 import { Button } from '@/components/ui/button'
-import { useScrollAnimation } from '@/lib/use-scroll-animation'
+import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 
 export default function FooterContent() {
   const years = new Date().getFullYear()

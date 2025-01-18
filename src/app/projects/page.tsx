@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import Loading from '../loading'
 
 import { loadingTimeout } from '@/lib/loading-timeout'
-import { archivo } from '@/lib/font'
+import { archivo, popins } from '@/lib/font'
 
 import MainLayout from '@/components/layout/page/main-layout'
 import { StickyScroll } from '@/components/ui/sticky-scroll-reveal'
@@ -13,6 +13,9 @@ import { motion } from 'framer-motion'
 import { textHighlight } from '@/lib/animation'
 
 const textProject = ['My Projects']
+const textDesc = [
+  'Showcasing Thoughtful Creations: Innovative Solutions with Stunning Designs and Seamless Functionality.',
+]
 
 export default function Projects() {
   const [loading, setLoading] = useState(true)
@@ -51,6 +54,24 @@ export default function Projects() {
                     {text}
                   </motion.span>
                 </motion.h1>
+              ))}
+            </motion.div>
+
+            <motion.div className="max-w-full text-start">
+              {textDesc.map((text, idx) => (
+                <motion.p
+                  key={idx}
+                  className={`${popins.className} text-start leading-wider text-base md:text-lg xl:text-[22px]`}
+                >
+                  <motion.span
+                    variants={textHighlight}
+                    initial="initial"
+                    animate="animate"
+                    className="block"
+                  >
+                    {text}
+                  </motion.span>
+                </motion.p>
               ))}
             </motion.div>
             <div className="p-10 flex justify-center items-center mx-auto w-full">
