@@ -1,4 +1,4 @@
-import { Variants } from 'framer-motion'
+import { useTransform, Variants } from 'framer-motion'
 
 export const openTransition = {
   open: {

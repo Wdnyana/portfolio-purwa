@@ -7,6 +7,7 @@ import MainLayout from '@/components/layout/page/main-layout'
 import { loadingTimeout } from '@/lib/loading-timeout'
 import Hero from '@/components/sections/hero'
 import DescriptionTag from '@/components/sections/description-tag'
+import HighlightProject from '@/components/sections/highlight-project'
 
 export default function Home() {
   const [loading, setLoading] = useState(true)
@@ -30,11 +31,10 @@ export default function Home() {
           <Hero />
         </div>
 
-        <div className="my-5 lg:my-20 2xl:my-24 h-auto w-full">
+        <div className="my-5 lg:my-20 2xl:my-24 h-full w-full">
           <DescriptionTag />
-        </div>
-        <div className="my-5 lg:my-20 2xl:my-24 h-auto w-full">
-          <DescriptionTag />
+
+          <HighlightProject />
         </div>
       </section>
     </MainLayout>

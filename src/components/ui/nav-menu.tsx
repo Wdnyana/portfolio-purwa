@@ -19,6 +19,7 @@ import {
   TypesNavMenuMobile,
   TypesPageTransition,
 } from '@/types/type'
+import { Button } from './button'
 
 function timingTransition(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms))
@@ -108,8 +109,23 @@ export const NavbarMenuDesktop = ({
           </motion.div>
         ))}
       </div>
-      <motion.div variants={textHighlight} initial="initial" animate="animate">
+      <motion.div
+        className="flex gap-3 items-center"
+        variants={textHighlight}
+        initial="initial"
+        animate="animate"
+      >
         <DarkmodeToggle />
+
+        <Link
+          href="https://drive.google.com/uc?export=download&id=1DbXHb737qtcb6KhLYiKq3xokwuT1uJQ4"
+          rel="noreferrer"
+          target="__blank"
+        >
+          <Button variant="default" className="tracking-wider text-base py-5">
+            Download CV
+          </Button>
+        </Link>
       </motion.div>
     </div>
   )
@@ -169,6 +185,14 @@ export const NavbarMobile = ({
               />
             </motion.div>
           </Link>
+        </div>
+        <div>
+          <motion.div
+            variants={textHighlight}
+            initial="initial"
+            animate="animate"
+            className="flex"
+          ></motion.div>
         </div>
 
         <div className="relative h-full overflow-hidden flex items-center justify-center gap-[15px]">
@@ -233,6 +257,21 @@ export const NavbarMobile = ({
                 </Link>
               </motion.div>
             ))}
+
+            <motion.a
+              className="mt-5"
+              variants={variantsNavLink}
+              href="https://drive.google.com/uc?export=download&id=1DbXHb737qtcb6KhLYiKq3xokwuT1uJQ4"
+              rel="noreferrer"
+              target="__blank"
+            >
+              <Button
+                variant="default"
+                className="tracking-wider text-base py-5"
+              >
+                Download CV
+              </Button>
+            </motion.a>
           </motion.div>
         </motion.div>
       </motion.nav>
