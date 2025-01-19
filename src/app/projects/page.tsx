@@ -12,7 +12,7 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal'
 import { motion } from 'framer-motion'
 import { textHighlight } from '@/lib/animation'
 
-const textProject = ['My Projects']
+const textProject = ['Projects']
 const textDesc = [
   'Showcasing Thoughtful Creations: Innovative Solutions with Stunning Designs and Seamless Functionality.',
 ]

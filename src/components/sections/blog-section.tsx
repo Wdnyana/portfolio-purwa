@@ -5,6 +5,8 @@ import { BlogExample } from '../../../public/images'
 import Link from 'next/link'
 import { MoveRight } from 'lucide-react'
 import { Button } from '../ui/button'
+import { motion } from 'framer-motion'
+import { textHighlight } from '@/lib/animation'
 
 const blogPosts = [
   { slug: '123', title: 'First Blog Post' },
@@ -16,7 +18,10 @@ export function BlogSection() {
   return (
     <BlogLayout>
       {blogPosts.map((blog) => (
-        <div
+        <motion.div
+          variants={textHighlight}
+          initial="initial"
+          animate="animate"
           key={blog.slug}
           className="rounded-[18px] p-[10px] md:p-[14px] xl:p-[18px] flex flex-col-reverse md:flex-row items-center justify-center gap-4 mt-5"
         >
@@ -73,7 +78,7 @@ export function BlogSection() {
               alt="Image Blog"
             />
           </div>
-        </div>
+        </motion.div>
       ))}
     </BlogLayout>
   )
