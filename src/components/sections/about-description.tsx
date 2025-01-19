@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-undef */
+import { educations, experiences, sertifications } from '@/lib/data'
 import { archivo, popins } from '@/lib/font'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useEffect, useState } from 'react'
@@ -30,8 +32,8 @@ export default function AboutDescription() {
   }, [])
 
   return (
-    <div className="sticky top-0 min-h-[210vh] md:min-h-[175vh] overflow-hidden">
-      <div className=" grid grid-cols-1 md:items-center h-[125vh] relative">
+    <div className="sticky top-0 min-h-full overflow-hidden">
+      <div className=" grid grid-cols-1 md:items-center relative">
         <motion.div
           className="border-t-4"
           initial={{ scaleX: 0 }}
@@ -102,6 +104,8 @@ export default function AboutDescription() {
             margin: '0px 0px -250px 0px',
           }}
         />
+
+        {/* education start */}
         <div className="py-10 mt-16 md:mt-0 w-full flex flex-col md:flex-row justify-center md:items-center gap-6">
           <motion.div
             className="basis-1/2"
@@ -121,93 +125,55 @@ export default function AboutDescription() {
           </motion.div>
 
           <div className="basis-1/2 flex flex-col gap-8">
-            <motion.div
-              className="gap-4 bg-primary/40 py-4 px-5 inline-block rounded-lg"
-              initial={{ x: 100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              exit={{ x: '100%', opacity: 0 }}
-              transition={{ duration: 1, ease: 'easeInOut' }}
-              viewport={{
-                once: false,
-                amount: 0.5,
-                margin: '0px 0px -200px 0px',
-              }}
-            >
-              <motion.h3
-                className={`${archivo.className} text-center md:text-start text-xl font-medium md:text-[22px] 2xl:text-[26px] leading-wider`}
+            {educations.map((educ) => (
+              <motion.div
+                key={educ.id}
+                className="gap-4 bg-primary/40 py-4 px-5 inline-block rounded-lg"
                 initial={{ x: 100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 exit={{ x: '100%', opacity: 0 }}
-                transition={{ duration: 1, ease: 'easeInOut', delay: 0.2 }}
+                transition={{ duration: 1, ease: 'easeInOut' }}
                 viewport={{
                   once: false,
                   amount: 0.5,
                   margin: '0px 0px -200px 0px',
                 }}
               >
-                ITB Stikom Bali
-              </motion.h3>
+                <motion.h3
+                  className={`${archivo.className} text-center md:text-start text-xl font-medium md:text-[22px] 2xl:text-[26px] leading-wider`}
+                  initial={{ x: 100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  exit={{ x: '100%', opacity: 0 }}
+                  transition={{ duration: 1, ease: 'easeInOut', delay: 0.2 }}
+                  viewport={{
+                    once: false,
+                    amount: 0.5,
+                    margin: '0px 0px -200px 0px',
+                  }}
+                >
+                  {educ.institution}
+                </motion.h3>
 
-              <motion.p
-                className={`${popins.className} mt-4 text-center md:text-start text-lg font-medium md:text-[20px] 2xl:text-[22px] leading-wider text-muted-foreground`}
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                exit={{ x: '100%', opacity: 0 }}
-                transition={{ duration: 1, ease: 'easeInOut', delay: 0.4 }}
-                viewport={{
-                  once: false,
-                  amount: 0.5,
-                  margin: '0px 0px -200px 0px',
-                }}
-              >
-                2019 - 2024, Bali - Indonesia | Bachelor of Computer System.
-              </motion.p>
-            </motion.div>
-
-            <motion.div
-              className="gap-4 bg-primary/40 py-4 px-5 inline-block rounded-lg"
-              initial={{ x: 100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              exit={{ x: '100%', opacity: 0 }}
-              transition={{ duration: 1, ease: 'easeInOut' }}
-              viewport={{
-                once: false,
-                amount: 0.5,
-                margin: '0px 0px -150px 0px',
-              }}
-            >
-              <motion.h3
-                className={`${archivo.className} text-center md:text-start text-xl font-medium md:text-[22px] 2xl:text-[26px] leading-wider`}
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                exit={{ x: '100%', opacity: 0 }}
-                transition={{ duration: 1, ease: 'easeInOut', delay: 0.2 }}
-                viewport={{
-                  once: false,
-                  amount: 0.5,
-                  margin: '0px 0px -150px 0px',
-                }}
-              >
-                Lithan EduClaas.
-              </motion.h3>
-
-              <motion.p
-                className={`${popins.className} mt-4 text-center md:text-start text-lg font-medium md:text-[20px] 2xl:text-[22px] leading-wider text-muted-foreground`}
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                exit={{ x: '100%', opacity: 0 }}
-                transition={{ duration: 1, ease: 'easeInOut', delay: 0.4 }}
-                viewport={{
-                  once: false,
-                  amount: 0.5,
-                  margin: '0px 0px -200px 0px',
-                }}
-              >
-                2022 - 2023, Online - Singapore | Web Development Module.
-              </motion.p>
-            </motion.div>
+                <motion.p
+                  className={`${popins.className} mt-4 text-center md:text-start text-lg font-medium md:text-[20px] 2xl:text-[22px] leading-wider text-muted-foreground`}
+                  initial={{ x: 100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  exit={{ x: '100%', opacity: 0 }}
+                  transition={{ duration: 1, ease: 'easeInOut', delay: 0.4 }}
+                  viewport={{
+                    once: false,
+                    amount: 0.5,
+                    margin: '0px 0px -200px 0px',
+                  }}
+                >
+                  {educ.startDate} - {educ.endDate}, {educ.address} |{' '}
+                  {educ.degree}
+                </motion.p>
+              </motion.div>
+            ))}
           </div>
         </div>
+
         <motion.div
           className="border-t-4"
           initial={{ scaleX: 0 }}
@@ -219,6 +185,8 @@ export default function AboutDescription() {
             margin: '0px 0px -200px 0px',
           }}
         />
+
+        {/*experience start*/}
         <div className="py-10 mt-16 md:mt-0 w-full flex flex-col md:flex-row justify-center md:items-center gap-6">
           <motion.div
             className="basis-1/2"
@@ -237,10 +205,89 @@ export default function AboutDescription() {
             </h1>
           </motion.div>
 
-          {/*experience start*/}
+          <div className="basis-1/2 flex flex-col gap-8">
+            {experiences.map((expe) => (
+              <motion.div
+                key={expe.id}
+                className="gap-4 bg-primary/40 py-4 px-5 inline-block rounded-lg"
+                initial={{ x: 100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                exit={{ x: '100%', opacity: 0 }}
+                transition={{ duration: 1, ease: 'easeInOut' }}
+                viewport={{
+                  once: false,
+                  amount: 0.5,
+                  margin: '0px 0px -200px 0px',
+                }}
+              >
+                <motion.h3
+                  className={`${archivo.className} text-center md:text-start text-xl font-medium md:text-[22px] 2xl:text-[26px] leading-wider`}
+                  initial={{ x: 100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  exit={{ x: '100%', opacity: 0 }}
+                  transition={{ duration: 1, ease: 'easeInOut', delay: 0.2 }}
+                  viewport={{
+                    once: false,
+                    amount: 0.5,
+                    margin: '0px 0px -200px 0px',
+                  }}
+                >
+                  {expe.comapany}
+                </motion.h3>
+
+                <motion.p
+                  className={`${popins.className} mt-4 text-center md:text-start text-lg font-medium md:text-[20px] 2xl:text-[22px] leading-wider text-muted-foreground`}
+                  initial={{ x: 100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  exit={{ x: '100%', opacity: 0 }}
+                  transition={{ duration: 1, ease: 'easeInOut', delay: 0.4 }}
+                  viewport={{
+                    once: false,
+                    amount: 0.5,
+                    margin: '0px 0px -200px 0px',
+                  }}
+                >
+                  {expe.dates}, {expe.address} | {expe.role}
+                </motion.p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <motion.div
+          className="border-t-4"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          transition={{ duration: 1, ease: 'easeInOut' }}
+          viewport={{
+            once: false,
+            amount: 0.5,
+            margin: '0px 0px -200px 0px',
+          }}
+        />
+
+        {/* sertif */}
+        <div className="py-10 mt-16 md:mt-0 w-full flex flex-col md:flex-row justify-center md:items-center gap-6">
+          <motion.div
+            className="basis-1/2"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            exit={{ x: '-100%', opacity: 0 }}
+            transition={{ duration: 1, ease: 'easeInOut' }}
+            viewport={{
+              once: false,
+              amount: 0.5,
+              margin: '0px 0px -250px 0px',
+            }}
+          >
+            <h1 className="text-3xl md:text-[2.5rem] lg:text-[3rem] leading-wider font-bold tracking-wider uppercase text-center md:text-start">
+              sertification
+            </h1>
+          </motion.div>
+
           <div className="basis-1/2 flex flex-col gap-8">
             <motion.div
-              className="gap-4 bg-primary/40 py-4 px-5 inline-block rounded-lg"
+              className="gap-4 bg-primary/40 overflow-y-auto w-full scroll-bar h-[50vh] p-3 inline-block rounded-lg"
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               exit={{ x: '100%', opacity: 0 }}
@@ -251,124 +298,73 @@ export default function AboutDescription() {
                 margin: '0px 0px -200px 0px',
               }}
             >
-              <motion.h3
-                className={`${archivo.className} text-center md:text-start text-xl font-medium md:text-[22px] 2xl:text-[26px] leading-wider`}
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                exit={{ x: '100%', opacity: 0 }}
-                transition={{ duration: 1, ease: 'easeInOut', delay: 0.2 }}
-                viewport={{
-                  once: false,
-                  amount: 0.5,
-                  margin: '0px 0px -200px 0px',
-                }}
-              >
-                Baliola
-              </motion.h3>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
+                {sertifications.map((sertif) => (
+                  <div
+                    key={sertif.id}
+                    className="rounded-md col-span-1 w-full h-full p-1"
+                  >
+                    <div className="flex flex-col gap-2 overflow-x-hidden">
+                      <motion.img
+                        initial={{ x: 100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        exit={{ x: '100%', opacity: 0 }}
+                        transition={{
+                          duration: 1,
+                          ease: 'easeInOut',
+                          delay: 0.4,
+                        }}
+                        viewport={{
+                          once: false,
+                          amount: 0.5,
+                          margin: '0px 0px -200px 0px',
+                        }}
+                        src={sertif.link}
+                        className="rounded-md"
+                        alt="Image Sertification"
+                      />
 
-              <motion.p
-                className={`${popins.className} mt-4 text-center md:text-start text-lg font-medium md:text-[20px] 2xl:text-[22px] leading-wider text-muted-foreground`}
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                exit={{ x: '100%', opacity: 0 }}
-                transition={{ duration: 1, ease: 'easeInOut', delay: 0.4 }}
-                viewport={{
-                  once: false,
-                  amount: 0.5,
-                  margin: '0px 0px -200px 0px',
-                }}
-              >
-                June - September 2023, Bali - Indonesia | Intern Backend
-                Developer.
-              </motion.p>
-            </motion.div>
+                      <motion.h3
+                        initial={{ x: 100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        exit={{ x: '100%', opacity: 0 }}
+                        transition={{
+                          duration: 1,
+                          ease: 'easeInOut',
+                          delay: 0.4,
+                        }}
+                        viewport={{
+                          once: false,
+                          amount: 0.5,
+                          margin: '0px 0px -200px 0px',
+                        }}
+                        className="text-start font-semibold text-xl md:text-2xl mt-2 tracking-widest leading-normal"
+                      >
+                        {sertif.title}
+                      </motion.h3>
 
-            <motion.div
-              className="gap-4 bg-primary/40 py-4 px-5 inline-block rounded-lg"
-              initial={{ x: 100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              exit={{ x: '100%', opacity: 0 }}
-              transition={{ duration: 1, ease: 'easeInOut' }}
-              viewport={{
-                once: false,
-                amount: 0.5,
-                margin: '0px 0px -200px 0px',
-              }}
-            >
-              <motion.h3
-                className={`${archivo.className} text-center md:text-start text-xl font-medium md:text-[22px] 2xl:text-[26px] leading-wider`}
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                exit={{ x: '100%', opacity: 0 }}
-                transition={{ duration: 1, ease: 'easeInOut', delay: 0.2 }}
-                viewport={{
-                  once: false,
-                  amount: 0.5,
-                  margin: '0px 0px -200px 0px',
-                }}
-              >
-                Freelance
-              </motion.h3>
-
-              <motion.p
-                className={`${popins.className} mt-4 text-center md:text-start text-lg font-medium md:text-[20px] 2xl:text-[22px] leading-wider text-muted-foreground`}
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                exit={{ x: '100%', opacity: 0 }}
-                transition={{ duration: 1, ease: 'easeInOut', delay: 0.4 }}
-                viewport={{
-                  once: false,
-                  amount: 0.5,
-                  margin: '0px 0px -200px 0px',
-                }}
-              >
-                2023 - 2024, Bali - Indonesia | Freelance Web2 and Frontend Web3
-                Developer.
-              </motion.p>
-            </motion.div>
-
-            <motion.div
-              className="gap-4 bg-primary/40 py-4 px-5 inline-block rounded-lg"
-              initial={{ x: 100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              exit={{ x: '100%', opacity: 0 }}
-              transition={{ duration: 1, ease: 'easeInOut' }}
-              viewport={{
-                once: false,
-                amount: 0.5,
-                margin: '0px 0px -200px 0px',
-              }}
-            >
-              <motion.h3
-                className={`${archivo.className} text-center md:text-start text-xl font-medium md:text-[22px] 2xl:text-[26px] leading-wider`}
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                exit={{ x: '100%', opacity: 0 }}
-                transition={{ duration: 1, ease: 'easeInOut', delay: 0.2 }}
-                viewport={{
-                  once: false,
-                  amount: 0.5,
-                  margin: '0px 0px -200px 0px',
-                }}
-              >
-                Jobseeker
-              </motion.h3>
-
-              <motion.p
-                className={`${popins.className} mt-4 text-center md:text-start text-lg font-medium md:text-[20px] 2xl:text-[22px] leading-wider text-muted-foreground`}
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                exit={{ x: '100%', opacity: 0 }}
-                transition={{ duration: 1, ease: 'easeInOut', delay: 0.4 }}
-                viewport={{
-                  once: false,
-                  amount: 0.5,
-                  margin: '0px 0px -200px 0px',
-                }}
-              >
-                November 2024 - Now, Bali - Indonesia | Apprentice Backend
-                Developer.
-              </motion.p>
+                      <motion.p
+                        initial={{ x: 100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        exit={{ x: '100%', opacity: 0 }}
+                        transition={{
+                          duration: 1,
+                          ease: 'easeInOut',
+                          delay: 0.4,
+                        }}
+                        viewport={{
+                          once: false,
+                          amount: 0.5,
+                          margin: '0px 0px -200px 0px',
+                        }}
+                        className={`${popins.className} text-start text-sm md:text-base leading-wider`}
+                      >
+                        {sertif.description}
+                      </motion.p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </motion.div>
           </div>
         </div>

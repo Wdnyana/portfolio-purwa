@@ -11,7 +11,7 @@ import { textHighlight } from '@/lib/animation'
 import { motion } from 'framer-motion'
 import { BlogSection } from '@/components/sections/blog-section'
 
-const textProject = ['My Blog']
+const textProject = ['Blog']
 const textDesc = [
   'Exploring the Art of Full-Stack Development: Where Functionality Meets Beauty in Every Line of Code.',
 ]

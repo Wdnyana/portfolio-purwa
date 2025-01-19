@@ -33,7 +33,7 @@ export default function About() {
             <AboutHero />
           </div>
 
-          <div className="mt-5 min-h-screen w-full relative">
+          <div className="mt-5 min-h-full w-full relative">
             <AboutDescription />
           </div>
         </div>
