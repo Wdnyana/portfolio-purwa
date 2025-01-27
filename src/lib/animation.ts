@@ -104,3 +104,15 @@ export const textHighlight: Variants = {
     transition: { delay: 3.75, duration: 0.8 },
   },
 }
+
+export const titleHighlight: Variants = {
+  initial: {
+    opacity: 0,
+    y: '100%',
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.5, duration: 0.8 },
+  },
+}
