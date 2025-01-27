@@ -10,16 +10,12 @@ const navItems = [
     navLink: '/about',
   },
   {
-    navTitle: 'Blog',
-    navLink: '/blog',
-  },
-  {
     navTitle: 'Projects',
     navLink: '/projects',
   },
 ]
 
-const [home, about, projects, blog] = navItems
+const [home, about, projects] = navItems
 
 export function getNavItems(item: TypesNavbar[]): TypesNavbar | undefined {
   const items = new Set(item)
@@ -27,4 +23,4 @@ export function getNavItems(item: TypesNavbar[]): TypesNavbar | undefined {
   return navItems.find((nav) => !items.has(nav))
 }
 
-export const navbarLink = [home, about, projects, blog]
+export const navbarLink = [home, about, projects]
