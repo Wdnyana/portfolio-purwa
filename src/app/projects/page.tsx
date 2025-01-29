@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import Loading from '../loading'
 
@@ -11,9 +10,6 @@ import MainLayout from '@/components/layout/page/main-layout'
 import { motion } from 'framer-motion'
 import { textHighlight } from '@/lib/animation'
 import { Timeline } from '@/components/ui/timeline'
-import { Button } from '@/components/ui/button'
-import { Link } from 'lucide-react'
-
 const textProject = ['Projects']
 const textDesc = [
   'Showcasing Thoughtful Creations: Innovative Solutions with Stunning Designs and Seamless Functionality.',

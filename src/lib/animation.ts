@@ -141,3 +141,17 @@ export const titleHighlightScroll: Variants = {
     },
   },
 }
+
+export const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8 },
+  },
+  delayed: {
+    opacity: 1,
+    y: 0,
+    transition: { delay: 3.85, duration: 0.8 },
+  },
+}
