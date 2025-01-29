@@ -164,18 +164,23 @@ export const Timeline = () => {
                   className="flex justify-around items-center mt-8 gap-2 md:gap-4 w-full"
                 >
                   <Button
-                    asChild
                     disabled={!item.github}
+                    onClick={() => {
+                      if (item.github) window.open(item.github, '_blank')
+                    }}
                     className={`${popins.className} py-5 px-7 md:px-12 tracking-widest`}
                   >
-                    <Link href={item.github ? item.github : ''}>Code</Link>
+                    Code
                   </Button>
+
                   <Button
-                    asChild
                     disabled={!item.demo}
+                    onClick={() => {
+                      if (item.demo) window.open(item.demo, '_blank')
+                    }}
                     className={`${popins.className} py-5 px-7 md:px-12 tracking-widest`}
                   >
-                    <Link href={item.github ? item.github : ''}>Demo</Link>
+                    Demo
                   </Button>
                 </motion.div>
               </div>
