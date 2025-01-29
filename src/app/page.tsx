@@ -8,7 +8,6 @@ import MainLayout from '@/components/layout/page/main-layout'
 import { loadingTimeout } from '@/lib/loading-timeout'
 import Hero from '@/components/sections/hero'
 import DescriptionTag from '@/components/sections/description-tag'
-import HighlightProject from '@/components/sections/highlight-project'
 import ServiceSection from '@/components/sections/service-section'
 import { motion } from 'framer-motion'
 

@@ -13,7 +13,6 @@ A beautifully crafted, responsive portfolio website showcasing my latest project
 - Animation Page Transition
 - Text Highlight Animation
 - Dark Mode
-- Blog Page
 
 ## Tech Stack
 

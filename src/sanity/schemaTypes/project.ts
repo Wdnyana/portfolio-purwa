@@ -56,7 +56,6 @@ const projectSchema = {
       name: 'github',
       title: 'Project Code URL',
       type: 'url',
-      validation: (Rule) => Rule.required().error('Input URL Project'),
     }),
   ],
 }
