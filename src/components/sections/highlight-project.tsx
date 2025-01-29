@@ -1,3 +1,3 @@
 export default function HighlightProject() {
-  return <div>HighlightProject</div>
+  return <div className="my-10">HighlightProject</div>
 }

@@ -39,3 +39,13 @@ export type TypesStickyScroll = {
   }[]
   contentClassName?: string
 }
+
+export type Project = {
+  _id: string
+  title: string
+  description: string
+  technologies: string[]
+  demo: string
+  github: string
+  img: any[]
+}

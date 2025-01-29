@@ -104,3 +104,54 @@ export const textHighlight: Variants = {
     transition: { delay: 3.75, duration: 0.8 },
   },
 }
+
+export const titleHighlight: Variants = {
+  initial: {
+    opacity: 0,
+    y: '100%',
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.5, duration: 0.8 },
+  },
+}
+
+export const titleHighlightScroll: Variants = {
+  initial: {
+    opacity: 0,
+    y: '100%',
+  },
+  whileInView: {
+    y: 0,
+    opacity: 1,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.2, duration: 1 },
+  },
+  exit: {
+    y: '100%',
+    opacity: 0,
+    transition: {
+      duration: 1,
+      ease: 'easeInOut',
+      delay: 0.2,
+    },
+  },
+}
+
+export const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8 },
+  },
+  delayed: {
+    opacity: 1,
+    y: 0,
+    transition: { delay: 3.85, duration: 0.8 },
+  },
+}

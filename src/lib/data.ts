@@ -45,14 +45,8 @@ export const experiences = [
 export const sertifications = [
   {
     id: 1,
-    link: '/images/blog-example.png',
-    title: 'Example Sertif',
-    description: 'Learn Exampple from udemy course',
-  },
-  {
-    id: 2,
-    link: '/images/blog-example.png',
-    title: 'Example Sertif',
-    description: 'Learn Exampple from udemy course',
+    link: '/images/sertif-hacktown.png',
+    title: 'Sertif Hacktown 8.0',
+    description: 'Winner 2nd in Hackathon 8.0 Internet Computer as a Front-End',
   },
 ]
