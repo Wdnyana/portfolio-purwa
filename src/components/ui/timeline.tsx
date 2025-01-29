@@ -161,21 +161,21 @@ export const Timeline = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewportAnimation}
                   transition={{ duration: 0.8 }}
-                  className="flex justify-around items-center mt-8"
+                  className="flex justify-around items-center mt-8 gap-2 md:gap-4 w-full"
                 >
                   <Button
                     asChild
                     disabled={!item.github}
-                    className={`${popins.className} py-5 px-12 tracking-widest`}
+                    className={`${popins.className} py-5 px-7 md:px-12 tracking-widest`}
                   >
-                    <Link href={item.github}>Code</Link>
+                    <Link href={item.github ? item.github : ''}>Code</Link>
                   </Button>
                   <Button
                     asChild
                     disabled={!item.demo}
-                    className={`${popins.className} py-5 px-12 tracking-widest`}
+                    className={`${popins.className} py-5 px-7 md:px-12 tracking-widest`}
                   >
-                    <Link href={item.demo}>Demo</Link>
+                    <Link href={item.github ? item.github : ''}>Demo</Link>
                   </Button>
                 </motion.div>
               </div>
