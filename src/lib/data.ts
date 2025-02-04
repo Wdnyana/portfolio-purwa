@@ -46,7 +46,7 @@ export const sertifications = [
   {
     id: 1,
     link: '/images/sertif-hacktown.png',
-    title: 'Sertif Hacktown 8.0',
+    title: 'Sertification Hackathon 8.0',
     description: 'Winner 2nd in Hackathon 8.0 Internet Computer as a Front-End',
   },
 ]
