@@ -9,6 +9,11 @@ export async function generateMetadata(): Promise<Metadata | undefined> {
     description:
       'Motivated as Web Developer with a background in programming languages and web technologies. Experienced in creating and maintaining websites and applications. Committed to working with teams to achieve project goals and enhance technical skills.',
 
+    robots: {
+      index: false,
+      follow: true,
+    },
+
     openGraph: {
       type: 'website',
       url: 'https://purwa-widnyana.vercel.app/projects',
