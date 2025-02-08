@@ -5,7 +5,7 @@ import SiteAbout from '@/components/site/site-about'
 export async function generateMetadata(): Promise<Metadata | undefined> {
   return {
     metadataBase: new URL('https://purwa-widnyana.vercel.app/'),
-    title: 'About | Portfolio Purwa Wiadnyana',
+    title: 'About | Portfolio Purwa Wiadnyana Full-Stack Web Developer',
     description:
       'Motivated as Web Developer with a background in programming languages and web technologies. Experienced in creating and maintaining websites and applications. Committed to working with teams to achieve project goals and enhance technical skills.',
 
@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata | undefined> {
       images: [
         {
           url: '/images/opengraph-profile.jpg',
-          width: 1200,
+          width: 959,
           height: 630,
         },
       ],

@@ -8,7 +8,7 @@ import { ThemeProvider } from '@/components/providers/theme-provider'
 export async function generateMetadata(): Promise<Metadata | undefined> {
   return {
     metadataBase: new URL('https://purwa-widnyana.vercel.app/'),
-    title: 'Home | Portfolio Purwa Wiadnyana',
+    title: 'Home | Portfolio Purwa Wiadnyana Full-Stack Web Developer',
     description:
       'Motivated as Web Developer with a background in programming languages and web technologies. Experienced in creating and maintaining websites and applications. Committed to working with teams to achieve project goals and enhance technical skills.',
 
@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata | undefined> {
       images: [
         {
           url: '/images/opengraph-profile.jpg',
-          width: 1200,
+          width: 959,
           height: 630,
         },
       ],
