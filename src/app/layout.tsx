@@ -8,14 +8,14 @@ import { ThemeProvider } from '@/components/providers/theme-provider'
 export async function generateMetadata(): Promise<Metadata | undefined> {
   return {
     metadataBase: new URL('https://purwa-widnyana.vercel.app/'),
-    title: 'Home | Purwa Wiadnyana Portfolio',
+    title: 'Home | Portfolio of Purwa Wiadnyana, Full-Stack Web Developer',
     description:
       'Motivated as Web Developer with a background in programming languages and web technologies. Experienced in creating and maintaining websites and applications. Committed to working with teams to achieve project goals and enhance technical skills.',
 
     openGraph: {
       type: 'website',
       url: 'https://purwa-widnyana.vercel.app/',
-      title: 'Home',
+      title: 'Home | Portfolio of Purwa Wiadnyana, Full-Stack Web Developer',
       description:
         'Motivated as Web Developer with a background in programming languages and web technologies. Experienced in creating and maintaining websites and applications. Committed to working with teams to achieve project goals and enhance technical skills.',
 
@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata | undefined> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Home',
+      title: 'Home | Portfolio of Purwa Wiadnyana, Full-Stack Web Developer',
       description:
         'Motivated as Web Developer with a background in programming languages and web technologies. Experienced in creating and maintaining websites and applications. Committed to working with teams to achieve project goals and enhance technical skills.',
 
