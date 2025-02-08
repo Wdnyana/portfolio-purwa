@@ -5,10 +5,31 @@ import './styles/globals.css'
 
 import { ThemeProvider } from '@/components/providers/theme-provider'
 
-export const metadata: Metadata = {
-  title: 'Portfolio | Purwa Wiadnyana',
-  description:
-    'Motivated as Web Developer with a background in programming languages and web technologies. Experienced in creating and maintaining websites and applications. Committed to working with teams to achieve project goals and enhance technical skills.',
+export async function generateMetadata(): Promise<Metadata | undefined> {
+  return {
+    metadataBase: new URL('https://purwa-widnyana.vercel.app/'),
+    title: 'Home | Portfolio Purwa Purwa Wiadnyana',
+    description:
+      'Motivated as Web Developer with a background in programming languages and web technologies. Experienced in creating and maintaining websites and applications. Committed to working with teams to achieve project goals and enhance technical skills.',
+
+    openGraph: {
+      type: 'website',
+      url: 'https://purwa-widnyana.vercel.app/',
+      title: 'Home',
+      description:
+        'Motivated as Web Developer with a background in programming languages and web technologies. Experienced in creating and maintaining websites and applications. Committed to working with teams to achieve project goals and enhance technical skills.',
+
+      images: ['/images/opengraph-profile.jpg'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Home',
+      description:
+        'Motivated as Web Developer with a background in programming languages and web technologies. Experienced in creating and maintaining websites and applications. Committed to working with teams to achieve project goals and enhance technical skills.',
+
+      images: ['/images/opengraph-profile.jpg'],
+    },
+  }
 }
 
 export default function RootLayout({
