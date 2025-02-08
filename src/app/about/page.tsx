@@ -5,14 +5,14 @@ import SiteAbout from '@/components/site/site-about'
 export async function generateMetadata(): Promise<Metadata | undefined> {
   return {
     metadataBase: new URL('https://purwa-widnyana.vercel.app/'),
-    title: 'About | Portfolio of Purwa Wiadnyana, Full-Stack Web Developer',
+    title: 'About | Portfolio Purwa Wiadnyana, Full-Stack Developer',
     description:
       'Motivated as Web Developer with a background in programming languages and web technologies. Experienced in creating and maintaining websites and applications. Committed to working with teams to achieve project goals and enhance technical skills.',
 
     openGraph: {
       type: 'website',
       url: 'https://purwa-widnyana.vercel.app/about',
-      title: 'About | Portfolio of Purwa Wiadnyana, Full-Stack Web Developer',
+      title: 'About | Portfolio Purwa Wiadnyana, Full-Stack Developer',
       description:
         'Motivated as Web Developer with a background in programming languages and web technologies. Experienced in creating and maintaining websites and applications. Committed to working with teams to achieve project goals and enhance technical skills.',
 
@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata | undefined> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'About | Portfolio of Purwa Wiadnyana, Full-Stack Web Developer',
+      title: 'About | Portfolio Purwa Wiadnyana, Full-Stack Developer',
       description:
         'Motivated as Web Developer with a background in programming languages and web technologies. Experienced in creating and maintaining websites and applications. Committed to working with teams to achieve project goals and enhance technical skills.',
 
