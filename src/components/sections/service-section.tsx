@@ -10,19 +10,19 @@ export const projects = [
     id: 1,
     title: 'Front-End Development',
     description:
-      'Commit to Building clean, responsive, and user-friendly interfaces using React and Next.js.',
+      'Commit to Building clean, responsive, and user-friendly interfaces.',
   },
   {
     id: 2,
     title: 'Back-End Development',
     description:
-      'Creating reliable APIs and managing data using Java, Spring Boot, and Node.js',
+      'Building secure, functional APIs with robust data management.',
   },
   {
     id: 3,
     title: 'Full-Stack Solutions',
     description:
-      'Combining front-end and back-end skills to deliver complete and functional web applications.',
+      'Combining Front-end and Back-end skills to deliver complete and functional web applications.',
   },
 ]
 

@@ -116,9 +116,8 @@ export const NavbarMenuDesktop = ({
         animate="animate"
       >
         <DarkmodeToggle />
-
         <Link
-          href="https://drive.google.com/file/d/1rnxKazgujLR1VvAGznJbazz1IrLeg0Ej/view?usp=sharing"
+          href="https://drive.google.com/file/d/1-vamqyyOmpY9sGCNtSKyfvzxr6eYrd45/view?usp=sharing"
           rel="noreferrer"
           target="__blank"
         >
@@ -261,7 +260,7 @@ export const NavbarMobile = ({
             <motion.a
               className="mt-5"
               variants={variantsNavLink}
-              href="https://drive.google.com/uc?export=download&id=1DbXHb737qtcb6KhLYiKq3xokwuT1uJQ4"
+              href="https://drive.google.com/file/d/1-vamqyyOmpY9sGCNtSKyfvzxr6eYrd45/view?usp=sharing"
               rel="noreferrer"
               target="__blank"
             >

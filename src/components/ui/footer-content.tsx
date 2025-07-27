@@ -51,7 +51,7 @@ export default function FooterContent() {
 
           <div className="p-2 mt-4 flex md:basis-1/4 lg:basis-1/5 justify-center md:justify-start gap-10 items-center w-full">
             <Link
-              href="https://www.instagram.com/purwawiadnyana/"
+              href="https://www.instagram.com/codevo.dev/"
               target="__blank"
               legacyBehavior
             >

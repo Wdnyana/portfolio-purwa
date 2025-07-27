@@ -5,7 +5,7 @@ import { textHighlight } from '@/lib/animation'
 
 const heroTextSm = ['A Web', 'Developer', 'based in', 'Tabanan.']
 
-const heroTextMd = ['A Web Developer based in Tabanan.']
+const heroTextMd = ['A Web Developer based in Bali.']
 
 const textDesc = [
   'A Motivated Web Developer with a strong background in programming languages, Web technologies, and a deep passion for full-stack Deb Development. Finding joy in achieving goals through designing, Developing, and maintaining Web Applications, combining reliable functionality with visually appealing designs. Dedicated to adding elegant, eye-catching touches to every interactive animation on the Front-end while ensuring robust and scalable solutions on the Back-end. Committed to collaborating with teams to achieve project objectives and continuously enhancing technical skills across all aspects of Development.',

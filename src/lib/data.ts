@@ -31,14 +31,14 @@ export const experiences = [
     role: 'Web2 and Frontend Web3',
     comapany: 'Freelance',
     dates: '2023 - 2024',
-    address: 'Bali - Indonesia',
+    address: 'Denpasar, Bali - Indonesia',
   },
   {
     id: 3,
     role: 'Apprentice Backend Java Spring Boot',
     comapany: 'Jobseeker',
-    dates: 'November 2024 - Now',
-    address: 'Bali - Indonesia',
+    dates: 'November 2024 - March 2025',
+    address: 'Badung, Bali - Indonesia',
   },
 ]
 
